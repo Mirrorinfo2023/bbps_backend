@@ -5,6 +5,7 @@ const bbpsauthenticateJWT = require('../../middleware/bbpsauthMiddleware');
 const ccavenueController = require('../../controller/bill_pay/ccavenue_payment.controller');
 const logMiddleware = require('../../middleware/logMiddleware');
 const billDeskController = require('../../controller/billdesk/billdesk.controller');
+const icicibankController = require('../../controller/icicibank/icicibank.controller');
 
 const BillPayment = express.Router();
 
@@ -19,7 +20,11 @@ const endpoints = {
 	'/bill-pay-hold-reject': 'faa5056c14d8982ea58cc934a84f9e014c70e0c3',
 	'/billdesk-request': 'f68534f063ce1c646c6f583277c58cdbf28aa878',
 	'/billdesk-request-test': 'fbb3906322cc5a738e6eb701776514bece1cdab9',
-	'/billdesk-payment-status': 'ba55310a1bc86a8727fa0f61325b3078809e6df9'
+	'/billdesk-payment-status': 'ba55310a1bc86a8727fa0f61325b3078809e6df9',
+	'/icici-request': '9c1d6a5f0a41d3bb9e5e2a3d4f2a8b6c9d0f1e23',
+	'/icici-payment-status': '7b3c8d9a0f2e4a5b6c7d8e9f0a1b2c3d4e5f6a7b',
+	'/icici-response': '3f9a7b1c2d4e5f6a8b9c0d1e2f3a4b5c6d7e8f9a'
+
 };
 
 
@@ -32,7 +37,7 @@ BillPayment.post('/454a048ee09f82be251a44b976fadb1bf3f3a4e6', bbpsauthenticateJW
 		});
 });
 
-BillPayment.post('/f308eae69c85a45d634afbcc76a5d94609b832dd',bbpsauthenticateJWT, logMiddleware, (req, res) => {
+BillPayment.post('/f308eae69c85a45d634afbcc76a5d94609b832dd', bbpsauthenticateJWT, logMiddleware, (req, res) => {
 	billPayController.billFetch(req, res)
 		.then(data => res.json(data))
 		.catch(error => {
@@ -108,7 +113,7 @@ BillPayment.post('/ba55310a1bc86a8727fa0f61325b3078809e6df9', logMiddleware, (re
 });
 
 // 
-BillPayment.post('/biller-info',bbpsauthenticateJWT, (req, res) => {
+BillPayment.post('/biller-info', bbpsauthenticateJWT, (req, res) => {
 	billPayController.billerInfo(req.body, res).then(data => res.json(data));
 });
 
@@ -133,7 +138,7 @@ BillPayment.post('/bulkFetch', (req, res) => {
 });
 
 
-BillPayment.post('/bill-pay-quick',bbpsauthenticateJWT, (req, res) => {
+BillPayment.post('/bill-pay-quick', bbpsauthenticateJWT, (req, res) => {
 	billPayController.quickPay(req.body, res).then(data => res.json(data));
 });
 
@@ -169,6 +174,33 @@ BillPayment.post('/billdesk-response', (req, res) => {
 
 BillPayment.post('/billdesk-transaction-check', (req, res) => {
 	billDeskController.billdesk_status_check(req.body, res).then(data => res.json(data));
+});
+
+// icici-request
+BillPayment.post('/9c1d6a5f0a41d3bb9e5e2a3d4f2a8b6c9d0f1e23', logMiddleware, (req, res) => {
+	const ipAddress = req.clientIp;
+	icicibankController.icici_request(req.body, res, ipAddress);
+});
+
+// icici-payment-status
+BillPayment.post('/7b3c8d9a0f2e4a5b6c7d8e9f0a1b2c3d4e5f6a7b', logMiddleware, (req, res) => {
+	icicibankController.icici_status_check(req.body, res);
+});
+
+// icici-request
+BillPayment.post('/icici-request', (req, res) => {
+	const ipAddress = req.clientIp;
+	icicibankController.icici_request(req.body, res, ipAddress);
+});
+
+// icici-response (Return URL)
+BillPayment.post('/icici-response', (req, res) => {
+	icicibankController.icici_response(req.body, res);
+});
+
+// icici-payment-status
+BillPayment.post('/icici-payment-status', (req, res) => {
+	icicibankController.icici_status_check(req.body, res);
 });
 
 //

@@ -285,6 +285,12 @@ sequelize
 
   /*********************************ENDS BILLDESK******************************************** */
   
+    /*********************************START BILLDESK******************************************** */
+  db.IciciBankRequest = require("../model/icicibank/icicibank.model.js")(sequelize, DataTypes, Model);
+
+  /*********************************ENDS BILLDESK******************************************** */
+  
+
   /*********************************START Courses Video******************************************** */
   db.videoCategories = require("../model/course_video/videoCategories.model")(sequelize, DataTypes, Model);
   db.videoCourseDetails = require("../model/course_video/videoCourseDetails.model")(sequelize, DataTypes, Model);
