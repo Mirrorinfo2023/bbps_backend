@@ -1,0 +1,1185 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "description": "Mirror API Documentation",
+        "version": "1.0.0",
+        "title": "Mirror API",
+        "contact": {
+            "email": "nityanand.verma77@gmail.com"
+        },
+        "license": {
+            "name": "Mirror",
+            "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
+        }
+    },
+    "schemes": ["https"],
+    "host": "apis.mayway.in/",
+    "basePath": "/api",
+    "paths" : {
+        "/pincode/get-pincode":{
+            "summary":"Pincode",
+            "post":{
+                "description": "Pincode Api Check with x-www-form-urlencoded parameters",
+                "tags": ["PUBLIC ROUTE"],
+                "consumes": ["application/x-www-form-urlencoded"],
+                 "parameters": [
+                    {
+                        "name": "pincode",
+                        "in": "formData",
+                        "description": "PIN Code",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                          }
+                    }
+                ],
+                "responses":{
+                    "200":{
+                        "description":"Pincode Api Response"
+                    }
+                }
+            }
+            
+        },
+        
+        "/users/reffer-by":{
+            "summary":"reffer-by",
+            "post":{
+                "description": "User Refferal with x-www-form-urlencoded parameters",
+                "tags": ["PUBLIC ROUTE"],
+                "consumes": ["application/x-www-form-urlencoded"],
+                 "parameters": [
+                    {
+                        "name": "mlm_id",
+                        "in": "formData",
+                        "description": "MLM ID",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                          }
+                    }
+                ],
+                "responses":{
+                    "200":{
+                        "description":"Reffered By successful"
+                    }
+                }
+            }
+        },
+        "/users/register":{
+            "summary":"Register",
+            "post":{
+                "description": "User registration with x-www-form-urlencoded parameters",
+                "tags": ["PUBLIC ROUTE"],
+                "consumes": ["application/x-www-form-urlencoded"],
+                 "parameters": [
+                    {
+                        "name": "first_name",
+                        "in": "formData",
+                        "description": "User First Name",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                          }
+                    },
+                    {
+                        "name": "last_name",
+                        "in": "formData",
+                        "description": "User Last Name",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                          }
+                    },
+                     {
+                        "name": "dob",
+                        "in": "formData",
+                        "description": "dob",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                          }
+                    },
+                      {
+                        "name": "aniversary_date",
+                        "in": "formData",
+                        "description": "aniversary_date",
+                        "required": false,
+                        "schema": {
+                            "type": "string"
+                          }
+                    },
+                    
+                    {
+                        "name": "username",
+                        "in": "formData",
+                        "description": "Username",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                          }
+                    },
+                    {
+                        "name": "email",
+                        "in": "formData",
+                        "description": "User Email",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                          }
+                    },
+                    {
+                        "name": "mobile",
+                        "in": "formData",
+                        "description": "User mobile",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                          }
+                    },
+                    {
+                        "name": "password",
+                        "in": "formData",
+                        "description": "User password",
+                        "required": true,
+                        "schema": {
+                            "type": "password"
+                          }
+                    },
+                     {
+                        "name": "referred_by",
+                        "in": "formData",
+                        "description": "user id",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                          }
+                    },
+                     {
+                        "name": "country_id",
+                        "in": "formData",
+                        "description": "country id",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                          }
+                    },
+                      {
+                        "name": "state_id",
+                        "in": "formData",
+                        "description": "state id",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                          }
+                    },
+                      {
+                        "name": "city_id",
+                        "in": "formData",
+                        "description": "city id",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                          }
+                    },
+                      {
+                        "name": "pincode",
+                        "in": "formData",
+                        "description": "pincode",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                          }
+                    },
+                      {
+                        "name": "postOfficeName",
+                        "in": "formData",
+                        "description": "postOfficeName",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                          }
+                    },
+                      {
+                        "name": "circle",
+                        "in": "formData",
+                        "description": "circle",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                          }
+                    },
+                     {
+                        "name": "district",
+                        "in": "formData",
+                        "description": "district",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                          }
+                    },
+                      {
+                        "name": "division",
+                        "in": "formData",
+                        "description": "division",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                          }
+                    },
+                     {
+                        "name": "region",
+                        "in": "formData",
+                        "description": "region",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                          }
+                    },
+                       {
+                        "name": "block",
+                        "in": "formData",
+                        "description": "block",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                          }
+                    },
+                     {
+                        "name": "address",
+                        "in": "formData",
+                        "description": "address",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                          }
+                    }
+                    
+      
+                    
+                ],
+                "responses":{
+                    "200":{
+                        "description":"Registration successful with data in data key"
+                    }
+                }
+            }
+        },
+        "/users/login":{
+            "summary":"Login",
+            "post":{
+                "description": "User login with x-www-form-urlencoded parameters",
+                "tags": ["PUBLIC ROUTE"],
+                "consumes": ["application/x-www-form-urlencoded"],
+                 "parameters": [
+                    {
+                        "name": "username",
+                        "in": "formData",
+                        "description": "Username",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                          }
+                    },
+                    {
+                        "name": "password",
+                        "in": "formData",
+                        "description": "User password",
+                        "required": true,
+                        "schema": {
+                            "type": "password"
+                          }
+                    }
+                ],
+                "responses":{
+                    "200":{
+                        "description":"Login successful with token and data in data key"
+                    }
+                }
+            }
+        },
+          "/users/reset-password":{
+            "summary":"Reset Password",
+            "post":{
+                "description": "Reset Password with x-www-form-urlencoded parameters",
+                "tags": ["PUBLIC ROUTE"],
+                "consumes": ["application/x-www-form-urlencoded"],
+                 "parameters": [
+                    {
+                        "name": "mobile",
+                        "in": "formData",
+                        "description": "Mobile",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                          }
+                    },
+                    {
+                        "name": "password",
+                        "in": "formData",
+                        "description": "User password",
+                        "required": true,
+                        "schema": {
+                            "type": "password"
+                          }
+                    },
+                     {
+                        "name": "confirmPassword",
+                        "in": "formData",
+                        "description": "User confirm password",
+                        "required": true,
+                        "schema": {
+                            "type": "password"
+                          }
+                    }
+                ],
+                "responses":{
+                    "200":{
+                        "description":"password reset successfully with token and data in data key"
+                    }
+                }
+            }
+        },
+           "/users/get-mpin":{
+            "summary":"Get MPIN",
+            "post":{
+                "description": "MPIN set with x-www-form-urlencoded parameters",
+                "tags": ["PUBLIC ROUTE"],
+                "consumes": ["application/x-www-form-urlencoded"],
+                 "parameters": [
+                    {
+                        "name": "user_id",
+                        "in": "formData",
+                        "description": "USERID",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                          }
+                    },
+                    {
+                        "name": "mpin",
+                        "in": "formData",
+                        "description": "MPIN",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                          }
+                    }
+                   
+                ],
+                "responses":{
+                    "200":{
+                        "description":"MPIN set successfully with token and data in data key"
+                    }
+                }
+            }
+        },
+        
+         "/users/upload-kyc":{
+            "summary":"Upload Kyc",
+            "post":{
+                "description": "Upload Kyc set with x-www-form-urlencoded parameters",
+                "tags": ["PUBLIC ROUTE"],
+                 "security": [
+                    {
+                      "BearerAuth":[]
+                    }
+                  ],
+                "consumes": ["application/x-www-form-urlencoded"],
+                 "parameters": [
+                    {
+                        "name": "aadhar_number",
+                        "in": "formData",
+                        "description": "Aadhar Number",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                          }
+                    },
+                    {
+                        "name": "pan_number",
+                        "in": "formData",
+                        "description": "PAN Number",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                          }
+                    },
+                     {
+                        "name": "account_number",
+                        "in": "formData",
+                        "description": "Account Number",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                          }
+                    },
+                     {
+                        "name": "account_holder",
+                        "in": "formData",
+                        "description": "Account Holder Name",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                          }
+                    },
+                     {
+                        "name": "bank_name",
+                        "in": "formData",
+                        "description": "Bank name",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                          }
+                    },
+                     {
+                        "name": "ifsc_code",
+                        "in": "formData",
+                        "description": "IFSC Code",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                          }
+                    },
+                     {
+                        "name": "nominee_name",
+                        "in": "formData",
+                        "description": "Nominee Name",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                          }
+                    },
+                     {
+                        "name": "nominee_relation",
+                        "in": "formData",
+                        "description": "Nominee Relation",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                          }
+                    },
+                    {
+                        "name": "panImage",
+                        "in": "formData",
+                        "description": "PAN Image",
+                        "required": true,
+                        "type": "file"
+                          
+                    },
+                    {
+                        "name": "aadharImage",
+                        "in": "formData",
+                        "description": "Aadhar Image",
+                        "required": true,
+                       "type": "file"
+                          
+                    },
+                    {
+                        "name": "chequeBookImage",
+                        "in": "formData",
+                        "description": "Cheque Book Image",
+                        "required": true,
+                        "type": "file"
+                          
+                    }
+                  
+                   
+                ],
+                "responses":{
+                    "200":{
+                        "description":"KyC Upload successfully with token and data in data key"
+                    }
+                }
+            },
+            "securityDefinitions": {
+              "BearerAuth": {
+                "type": "apiKey",
+                "name": "Authorization",
+                "in": "header"
+              }
+            }
+        },
+        
+           "/page/get-page":{
+            "summary":"Get Page",
+            "post":{
+                "description": "get Page with x-www-form-urlencoded parameters",
+                "tags": ["PUBLIC ROUTE"],
+                "consumes": ["application/x-www-form-urlencoded"],
+                 "parameters": [
+                    {
+                        "name": "category",
+                        "in": "formData",
+                        "description": "Category",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                          }
+                    }
+                   
+                   
+                ],
+                "responses":{
+                    "200":{
+                        "description":"Get Page successfully with token and data in data key"
+                    }
+                }
+            }
+        },
+        
+           "/banner/get-banner":{
+            "summary":"Get Banner",
+            "post":{
+                "description": "Get Banner with x-www-form-urlencoded parameters",
+                "tags": ["PUBLIC ROUTE"],
+                "consumes": ["application/x-www-form-urlencoded"],
+                 "parameters": [
+                     {
+                        "name": "categoryId",
+                        "in": "formData",
+                        "description": "Category",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                          }
+                    }
+                ],
+                "responses":{
+                    "200":{
+                        "description":"Get Banner successfully with token and data in data key"
+                    }
+                }
+            }
+        },
+        
+        "/browsePlan/get-plan":{
+            "summary":"Get Plan",
+            "post":{
+                "description": "Get Plan with x-www-form-urlencoded parameters",
+                "tags": ["PUBLIC ROUTE"],
+                "consumes": ["application/x-www-form-urlencoded"],
+                 "parameters": [
+                    {
+                        "name": "operator",
+                        "in": "formData",
+                        "description": "Operator",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                          }
+                    },
+                    {
+                        "name": "circle",
+                        "in": "formData",
+                        "description": "Circle",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                          }
+                    }
+                ],
+                "responses":{
+                    "200":{
+                        "description":"Success with data in data key"
+                    }
+                }
+            }
+        },
+        "/operator/get-operator":{
+            "summary":"Get Operator",
+            "post":{
+                "description": "Get Operator with x-www-form-urlencoded parameters",
+                "tags": ["PUBLIC ROUTE"],
+                "consumes": ["application/x-www-form-urlencoded"],
+                 "parameters": [
+                ],
+                "responses":{
+                    "200":{
+                        "description":"Success with data in data key"
+                    }
+                }
+            }
+        },
+        "/operator/add-operator":{
+            "summary":"Add operator",
+            "post":{
+                "description": "Add operator with x-www-form-urlencoded parameters",
+                "tags": ["PUBLIC ROUTE"],
+                "consumes": ["application/x-www-form-urlencoded"],
+                 "parameters": [
+                    {
+                        "name": "operator_name",
+                        "in": "formData",
+                        "description": "Operator Name",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                          }
+                    },
+                    {
+                        "name": "description",
+                        "in": "formData",
+                        "description": "Description",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                          }
+                    },
+                    {
+                        "name": "image",
+                        "in": "formData",
+                        "description": "Image of Operator",
+                        "required": true,
+                        "schema": {
+                            "type": "file"
+                          }
+                    }
+                ],
+                "responses":{
+                    "200":{
+                        "description":"Operator added successfully with data in data key"
+                    }
+                }
+            }
+        },
+        "/add_money/add-money-request":{
+            "summary":"Add money",
+            "post":{
+                "description": "Add money with multipart/form-data parameters",
+                "tags": ["PUBLIC ROUTE"],
+                "consumes": ["multipart/form-data"],
+                 "parameters": [
+                    {
+                        "name": "user_id",
+                        "in": "formData",
+                        "description": "User Id",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                          }
+                    },
+                    {
+                        "name": "amount",
+                        "in": "formData",
+                        "description": "Amount",
+                        "required": true,
+                        "schema": {
+                            "type": "double"
+                          }
+                    },
+                    {
+                        "name": "category",
+                        "in": "formData",
+                        "description": "Select Category",
+                        "required": true,
+                      "type": "string",
+                     "enum": ["UPI", "Bank", "MANUAL"]
+                    },
+                    {
+                        "name": "trans_no",
+                        "in": "formData",
+                        "description": "Transaction No.",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                          }
+                    },
+                    {
+                        "name": "img",
+                        "in": "formData",
+                        "description": "Image",
+                        "required": true,
+                        "type": "file"
+                    }
+                ],
+                "responses":{
+                    "200":{
+                        "description":"Add money success"
+                    }
+                }
+            }
+        },
+         "/add_money/add-money-order":{
+            "summary":"Add money order token api",
+            "post":{
+                "description": "Add money order token with x-www-form-urlencoded parameters",
+                "tags": ["PUBLIC ROUTE"],
+                 "consumes": ["application/x-www-form-urlencoded"],
+                 "parameters": [
+                    {
+                        "name": "user_id",
+                        "in": "formData",
+                        "description": "User Id",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                          }
+                    },
+                    {
+                        "name": "trans_amount",
+                        "in": "formData",
+                        "description": "Amount",
+                        "required": true,
+                        "schema": {
+                            "type": "double"
+                          }
+                    },
+                    {
+                        "name": "tran_sub_type",
+                        "in": "formData",
+                        "description": "Select Category",
+                        "required": true,
+                      "type": "string",
+                     "enum": ["HDFC UPI", "MANUAL ORDER", "CC AVENUE UPI","BILL DESK UPI"]
+                    },
+                     {
+                        "name": "ip_address",
+                        "in": "formData",
+                        "description": "ip",
+                        "required": true,
+                      "type": "string"
+                    }
+                    
+                ],
+                "responses":{
+                    "200":{
+                        "description":"Add money order success"
+                    }
+                }
+            }
+        },
+         "/wallet/get-wallet-balance":{
+            "summary":"get wallet balance",
+            "post":{
+                "description": "get-wallet-balance Api Check with x-www-form-urlencoded parameters",
+                "tags": ["PUBLIC ROUTE"],
+                "consumes": ["application/x-www-form-urlencoded"],
+                 "parameters": [
+                    {
+                        "name": "user_id",
+                        "in": "formData",
+                        "description": "user",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                          }
+                    }
+                ],
+                "responses":{
+                    "200":{
+                        "description":"wallet balance Api Response"
+                    }
+                }
+            }
+        },
+          "/referral/plan/request-redeem":{
+            "summary":"redeem   api",
+            "post":{
+                "description": "redeem with x-www-form-urlencoded parameters",
+                "tags": ["PUBLIC ROUTE"],
+                 "consumes": ["application/x-www-form-urlencoded"],
+                 "parameters": [
+                    {
+                        "name": "user_id",
+                        "in": "formData",
+                        "description": "User Id",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                          }
+                    },
+                    {
+                        "name": "amount",
+                        "in": "formData",
+                        "description": "Amount",
+                        "required": true,
+                        "schema": {
+                            "type": "double"
+                          }
+                    },
+                     {
+                        "name": "remarks",
+                        "in": "formData",
+                        "description": "remarks",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                          }
+                    }
+                  
+                    
+                ],
+                "responses":{
+                    "200":{
+                        "description":"reedem  success"
+                    }
+                }
+            }
+        },
+          "/wallet/get-upi":{
+            "summary":"get upi",
+            "get":{
+                "description": "get-upi Api Check with x-www-form-urlencoded parameters",
+                "tags": ["PUBLIC ROUTE"],
+                "consumes": ["application/x-www-form-urlencoded"],
+                 "parameters": [
+                   
+                ],
+                "responses":{
+                    "200":{
+                        "description":"upi Api Response"
+                    }
+                }
+            }
+        },
+        "/referral/plan/get-referral-plan":{
+            "summary":"Referral Plan",
+            "get":{
+                "description": "Referral Plan Api Check with x-www-form-urlencoded parameters",
+                "tags": ["PUBLIC ROUTE"],
+                "consumes": ["application/x-www-form-urlencoded"],
+               
+                "responses":{
+                    "200":{
+                        "description":"Referral plan Api Response"
+                    }
+                }
+            }
+        },
+          "/refferal-report/prime-user-report":{
+            "summary":"Referral Prime User",
+            "post":{
+                "description": "Referral Prime User Api Check with x-www-form-urlencoded parameters",
+                "tags": ["PUBLIC ROUTE"],
+                "consumes": ["application/x-www-form-urlencoded"],
+                "parameters": [
+                    {
+                        "name": "user_id",
+                        "in": "formData",
+                        "description": "user",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                          }
+                    }
+                ],
+                "responses":{
+                    "200":{
+                        "description":"Referral plan Api Response"
+                    }
+                }
+            }
+        },
+        "/refferal-report/prime-distribution-report":{
+            "summary":"Referral Prime distribution User",
+            "post":{
+                "description": "Referral Prime distribution User Api Check with x-www-form-urlencoded parameters",
+                "tags": ["PUBLIC ROUTE"],
+                "consumes": ["application/x-www-form-urlencoded"],
+                "parameters": [
+                    {
+                        "name": "sender_id",
+                        "in": "formData",
+                        "description": "user",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                          }
+                    }
+                ],
+                "responses":{
+                    "200":{
+                        "description":"Referral plan distribution Api Response"
+                    }
+                }
+            }
+        },
+           "/refferal-report/user-income-report":{
+            "summary":"Referral Prime distribution User",
+            "post":{
+                "description": "Referral Prime distribution User Api Check with x-www-form-urlencoded parameters",
+                "tags": ["PUBLIC ROUTE"],
+                "consumes": ["application/x-www-form-urlencoded"],
+                "parameters": [
+                    {
+                        "name": "user_id",
+                        "in": "formData",
+                        "description": "user",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                          }
+                    }
+                ],
+                "responses":{
+                    "200":{
+                        "description":"Referral plan distribution Api Response"
+                    }
+                }
+            }
+        },
+         "/refferal-report/team-details":{
+            "summary":"Referral team-details",
+            "post":{
+                "description": "Referral team-details Api Check with x-www-form-urlencoded parameters",
+                "tags": ["PUBLIC ROUTE"],
+                "consumes": ["application/x-www-form-urlencoded"],
+                "parameters": [
+                    {
+                        "name": "user_id",
+                        "in": "formData",
+                        "description": "user",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                          }
+                    },
+                       {
+                        "name": "plan_id",
+                        "in": "formData",
+                        "description": "plan",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                          }
+                    }
+                ],
+                "responses":{
+                    "200":{
+                        "description":"Referral team-details Api Response"
+                    }
+                }
+            }
+        },
+         "/refferal-report/team-level-details":{
+            "summary":"Referral level team-details",
+            "post":{
+                "description": "Referral team-level details Api Check with x-www-form-urlencoded parameters",
+                "tags": ["PUBLIC ROUTE"],
+                "consumes": ["application/x-www-form-urlencoded"],
+                "parameters": [
+                    {
+                        "name": "user_id",
+                        "in": "formData",
+                        "description": "user",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                          }
+                    },
+                       {
+                        "name": "level",
+                        "in": "formData",
+                        "description": "level",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                          }
+                    },
+                    {
+                        "name": "page",
+                        "in": "formData",
+                        "description": "page",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                          }
+                    },
+                      {
+                        "name": "teamType",
+                        "in": "formData",
+                        "description": "teamType",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                          }
+                    }
+                ],
+                "responses":{
+                    "200":{
+                        "description":"Referral team-level details Api Response"
+                    }
+                }
+            }
+        },
+         "/referral/plan/purchase":{
+            "summary":"Referral Plan Purchase",
+            "post":{
+                "description": "Referral Plan Purchase Api Check with x-www-form-urlencoded parameters",
+                "tags": ["PUBLIC ROUTE"],
+                "consumes": ["application/x-www-form-urlencoded"],
+                 "parameters": [
+                    {
+                        "name": "user_id",
+                        "in": "formData",
+                        "description": "user",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                          }
+                    },
+                     {
+                        "name": "plan_id",
+                        "in": "formData",
+                        "description": "plan_id",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                          }
+                    },
+                     {
+                        "name": "amount",
+                        "in": "formData",
+                        "description": "amount",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                          }
+                    }
+                    
+                ],
+                "responses":{
+                    "200":{
+                        "description":"Referral plan Api Response"
+                    }
+                }
+            }
+        },
+        "/recharge/make-payment":{
+            "summary":"Recharge",
+            "post":{
+                "description": "Recharge with x-www-form-urlencoded parameters",
+                "tags": ["PUBLIC ROUTE"],
+                "consumes": ["application/x-www-form-urlencoded"],
+                 "parameters": [
+                    {
+                        "name": "mobile",
+                        "in": "formData",
+                        "description": "Mobile No.",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                          }
+                    },
+                    {
+                        "name": "amount",
+                        "in": "formData",
+                        "description": "Amount",
+                        "required": true,
+                        "schema": {
+                            "type": "double"
+                          }
+                    },
+                    {
+                        "name": "type",
+                        "in": "formData",
+                        "description": "Type like (Prepaid, Postpaid)",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                          }
+                    },
+                    {
+                        "name": "operatorId",
+                        "in": "formData",
+                        "description": "Operator Id",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                          }
+                    },
+                    {
+                        "name": "env",
+                        "in": "formData",
+                        "description": "Envoirnment like Development",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                          }
+                    },
+                    {
+                        "name": "main_amount",
+                        "in": "formData",
+                        "description": "Amount",
+                        "required": true,
+                        "schema": {
+                            "type": "double"
+                          }
+                    },
+                    {
+                        "name": "ConsumerNumber",
+                        "in": "formData",
+                        "description": "Consumer Number ",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                          }
+                    },
+                    {
+                        "name": "user_id",
+                        "in": "formData",
+                        "description": "User Id",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                          }
+                    }
+                   
+                ],
+                "responses":{
+                    "200":{
+                        "description":"Registration successful with data in data key"
+                    }
+                }
+            }
+        }
+       
+       
+    },
+    "definitions": {
+        "todosResponse": {
+            "type": "object",
+            "properties": {
+                "id": {
+                     "type": "integer"
+                },
+                "task": {
+                    "type": "string"
+                },
+                "assignee": {
+                    "type": "string"
+                },
+                "status": {
+                    "type": "string"
+                }
+            }
+        },
+        "Task": {
+            "type": "object",
+            "properties": {
+                "task": {
+                    "type": "string"
+                },
+                "assignee": {
+                    "type": "string"
+                },
+                "status": {
+                    "type": "string"
+                }
+            }
+        },
+        "InvalidResponse": {
+            "type": "object",
+            "properties": {
+                "statusCode": {
+                    "type": "string"
+                },
+                "message": {
+                    "type": "string"
+                }
+            }
+
+        }
+    }
+}

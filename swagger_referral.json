@@ -1,0 +1,79 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "description": "Mirror REFERRAL API Documentation",
+        "version": "1.0.0",
+        "title": "Mirror API",
+        "contact": {
+            "email": "nityanand.verma77@gmail.com"
+        },
+        "license": {
+            "name": "Mirror REFERRAL",
+            "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
+        }
+    },
+    "schemes": ["https"],
+    "host": "apis.mayway.in/",
+    "basePath": "/api/referral",
+    "paths" : {
+        "/plan/get-referral-plan":{
+            "summary":"Referral Plan",
+            "get":{
+                "description": "Referral Plan Api Check with x-www-form-urlencoded parameters",
+                "tags": ["PUBLIC ROUTE"],
+                "consumes": ["application/x-www-form-urlencoded"],
+               
+                "responses":{
+                    "200":{
+                        "description":"Referral plan Api Response"
+                    }
+                }
+            }
+        }
+    },
+    "definitions": {
+        "todosResponse": {
+            "type": "object",
+            "properties": {
+                "id": {
+                     "type": "integer"
+                },
+                "task": {
+                    "type": "string"
+                },
+                "assignee": {
+                    "type": "string"
+                },
+                "status": {
+                    "type": "string"
+                }
+            }
+        },
+        "Task": {
+            "type": "object",
+            "properties": {
+                "task": {
+                    "type": "string"
+                },
+                "assignee": {
+                    "type": "string"
+                },
+                "status": {
+                    "type": "string"
+                }
+            }
+        },
+        "InvalidResponse": {
+            "type": "object",
+            "properties": {
+                "statusCode": {
+                    "type": "string"
+                },
+                "message": {
+                    "type": "string"
+                }
+            }
+
+        }
+    }
+}

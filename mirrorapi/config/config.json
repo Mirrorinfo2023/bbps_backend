@@ -1,0 +1,36 @@
+{
+   "username" : "bbps_user",
+    "password" : "bbps_password",
+    "database" :"bbps_db",
+    
+    "partner_username" : "bbps_user",
+    "partner_password" : "bbps_password",
+    "partner_database" :"bbps_db",
+    
+    "hub_username" : "bbps_user",
+    "hub_password" : "bbps_password",
+    "hub_database" :"bbps_db",
+    
+    "shop_username" : "bbps_user",
+    "shop_password" : "bbps_password",
+    "shop_database" :"bbps_db",
+    
+    "host" : "localhost",
+    "dialect" : "mysql",
+    "env" : "PROD",
+    "baseurl": "https://secure.mirrorinfo.in/",
+    "SECRET_KEY": "a2cde7fbb7a767c2e23068ac125eb528",
+    
+        
+    "SUPPORT_TEAM":"Mayway Support Team",
+    "APP_NAME":"Mayway Business",
+    "TELEGEAM_LINK":"https://t.me/maywaybuisness",
+    "YOUTUBE_LINK":"https://youtube.com/@maywaybuisness?si=6rUdA81ttRdCCNRR",
+    "FACEBOOK_LINK":"https://www.facebook.com/maywaytech",
+    "WEBSITE":"",
+    "WEBSITE_HUB":"",
+    "APP_IMG":"",
+    "APP_LINK":""
+
+
+}
