@@ -195,7 +195,7 @@ BillPayment.post('/icici-request', (req, res) => {
 
 // icici-response (Return URL)
 BillPayment.post('/icici-response', (req, res) => {
-	icicibankController.icici_response(req.body, res);
+	icicibankController.icici_response(req, res);
 });
 
 // icici-payment-status
